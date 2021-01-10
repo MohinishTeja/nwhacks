@@ -3,239 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Ledger</title><link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Budget Ledger</title>
+     
+    <script defer src="app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script> 
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon.jpg">
-    <style>
- .button:after {
-  background: #2c3e50;
-}
-        
-
-/*END GRADIENTS*/
-/*BASE BUTTON*/
-.button {
-  display: inline-block;
-  font-family: 'PT Sans Narrow', sans-serif;
-  position: relative;
-  border-radius: 3px;
-  text-decoration: none;
-  padding: .5em;
-  background-color: #FFF;
-  margin: .5em;
-  font-size: 2em;
-  font-weight: bold;
-  transition: all .5s;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.button:hover {
-  text-shadow: 0px 0px 0px rgba(255, 255, 255, .75);
-}
-.button:hover:after {
-  left: 100%;
-  top: 100%;
-  bottom: 100%;
-  right: 100%;
-}
-.button:before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  border-radius: 5px;
-  transition: all .5s;
-}
-.button:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  bottom: 2px;
-  right: 2px;
-  z-index: -1;
-  border-radius: 5px;
-  transition: all .5s;
-}
-.button2 {
-  display: inline-block;
-  font-size: 2em;
-  margin: .5em;
-  padding: .5em;
-  border-radius: 5px;
-  transition: all .5s;
-  filter: hue-rotate(0deg);
-  color: #FFF;
-  text-decoration: none;
-}
-/*END BASE BUTTON*/
-/*ROTATE*/
-.rot-360-noscoop:hover {
-  filter: hue-rotate(360deg);
-  transform: rotate(360deg);
-}
-.rot-135:hover {
-  filter: hue-rotate(135deg);
-}
-.rot-90:hover {
-  filter: hue-rotate(90deg);
-}
-/*END ROTATE*/
-
-
-        .l{
-            position:absolute;
-        }
-        .lq{
     
-            font-family: 'PT Sans Narrow', sans-serif;
-            width: 100%;
-            font-size: 6em;
-            margin-top: 15%;
-            margin-left: 5em;
-        }
-        .lqq{
-            
-            font-family: 'PT Sans Narrow', sans-serif;
-            width: 100%;
-            font-size: 2em;
-            margin-top: -3%;
-            margin-left: 15em;
-        }
-
-        #bg-wrap{
-            margin: auto;
-        }
-        .lp{
-            position: absolute;
-        }
-        .lp1{
-             
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-size: 3em;
-            margin-top: 20%;
-            margin-left: 4em;
-        }
-        .lp2{
-             
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-size: 1.5em;
-            margin-top: 1px;
-            margin-right: 20px;
-            float: right;
-        
-        }
-        body{
-            margin: auto;
-        }
-        .lp4{
-            
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-size: 3em;
-            float: right;
-            margin-right: 2em;
-            margin-top: -20%;
-        }
-        .lp5{
-            
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-size: 1.5em;
-            margin-top: -15%;
-            float: right;
-            margin-right: 4em;
-        }
-        .lp9{
-            
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-size: 1.5em;
-            margin-top: -15%;
-            float: right;
-            margin-right: 2em;
-        }
-        .lp6{
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-size: 3em;
-            margin-top: 20%;
-            margin-left: 4em;
-
-        }
-        .lp7{
-             
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-size: 1.5em;
-            margin-top: 1px;
-            width: 150%;
-            margin-left: 10%;
-        }
-
-    </style>
 </head>
+
 <body>
-    <div class="l">
-  <h1 class="lq">Budget Ledger</h1><br><br>
-  <h1 class="lqq">Your very own Personal Crypto Wallet & Ledger</h1>
-  <img src="img/ethereum.png" style="margin-left: 65%;">
-  <br>
-<a href="home.html" class="button b-orange" style="margin-left: 65%; margin-top: 5%; background-color: #111;">Lets Go</a>
-</div>
-  <div id="bg-wrap">
-  
-    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" style="height: 790px; width:1519px;">
-      <defs>
-      <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
-      <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
-      <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
-      <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
-      <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
-      <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
-      </defs>
-      <!--<rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient4)">
-      <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" />
-      <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite" />
-      <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient5)">
-      <animate attributeName="x" dur="23s" values="0%;-25%;0%" repeatCount="indefinite" />
-      <animate attributeName="y" dur="24s" values="25%;-25%;25%" repeatCount="indefinite" />
-      <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient6)">
-      <animate attributeName="x" dur="25s" values="-25%;0%;-25%" repeatCount="indefinite" />
-      <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" />
-      <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"/>
-      </rect>-->
-      <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
-      <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
-      </rect>
-      <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
-      </rect>
-      </svg>
-  </div>
-  <div class="lp">
-      <h3 class="lp1">Send payments to anyone using Ether</h3>
-      <h4 class="lp2">Easily transact with peers using the best Altcoin- Ethereum</h4>
-  </div>
-  <img src="img/pay1.png" height="500px" width="700px" style="float: right;">
-  <img src="img/port.png" height="500px" width="700px"  style="margin-top: 30%;">
-  <div class="lp3">
-      <h3 class="lp4">Manage Portfolio and Transactions</h3>
-      <h4 class="lp5">Get all your transaction and account details at single place</h4>
-  </div>
-  <img src="img/take (1).png" height="500px" width="700px" style="float: right;">
-  <div class="lp">
-    <h3 class="lp6">Easily accessible</h3>
-    <h4 class="lp7">Use it instantly using our Web app and Chrome extension</h4>
-</div>
-<img src="img/head.png" height="500px" width="700px"  style="margin-top: 30%;">
-  <div class="lp3">
-      <h3 class="lp4">Powered by Ethreum Network</h3>
-      <h4 class="lp9">Backed by the most trusted Blockchain network for making custom custom smart contracts</h4>
-  </div>
+
+    
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="load.html">Add Entry</a></li>
+    <li><a href="pay.html">Pay</a></li>
+    <li style="float:right"><a class="active1" href="index.html">Budget Ledger</a></li>
+  </ul>
+    <h1 align="center" style="font-family: 'DM Mono', monospace; color: white">Welcome</h1>
+
+    <div>
+
+        <div class="form" >
+            
+            <div class="head" class="Income">
+                <div onclick="changeTab(this)" data-tab="Expenditure" class="Expenditure-tab" style="font-size: 1.25em; color: #FF0000 "><b>Expenditure </b></div>
+                <div onclick="changeTab(this)" data-tab="Income" class="Income-tab" style="font-size: 1.25em; color: rgb(33, 114, 229)"><b>Income</b></div>
+            </div>
+            <br><br>
+            <div class="body" id="form-body" align="center">
+                
+
+                <div class="Expenditure" align="center">
+                    <div class="input-fields" style="text-transform: uppercase; display:block;font-size: 1.25em; padding:0 30px">
+                        <div class="items" style="width: 100%">
+                            <label for="title" class="label"  style="display: block">Title </label>
+                            <input id="titlebox_e" type="text" style="background:transparent; border:0; border:1px solid white; width: 75%;height:30px; padding: 8px, 10px; color: white;border-radius:10px" placeholder="Enter Title"></input> <br><br>
+                        </div>
+                        <div class="items" style="width: 100%">
+                            <label for="Category" class="label"  style="display: block">Category</label>
+                            
+                            <select id="category_e" style="font-size: 1.1em; background:transparent; border:0; border:1px solid white; width: 75%; padding: 8px, 10px;border-radius:10px; color: white" >
+                                <option value="" style="color: white; background-color: #17141d">Choose Category</option>
+                            <option value="Shopping" style="color: white; background-color: #17141d">Shopping</option>
+                            <option value="Food" style="color: white; background-color: #17141d;">Food</option>
+                            <option value="Bills" style="color: white; background-color: #17141d">Bills</option>
+                            <option value="Health" style="color: white; background-color: #17141d">Health</option>
+                            <option value="Transport" style="color: white; background-color: #17141d">Transport</option>
+                            <option value="Learn" style="color: white; background-color: #17141d">Learn</option>
+                            <option value="others" style="color: white; background-color: #17141d">Others</option>
+                            </select>
+                        
+                            <br><br>
+                        </div>
+                    <div class="items" style="width: 100%">
+                        <label for="Note" class="label"  style="display: block" >Note</label>
+                        <input id="note_e" type="text" style="background:transparent; border:0; border:1px solid white; width: 75%; padding: 8px, 10px; color: white;height:30px;border-radius:10px" placeholder="Enter Note"></input><br><br>
+                    </div>
+                    <div class="items" style="width: 100%">
+                        <label for="Amount" class="label" required style="display: block" >Amount</label>
+                        <input id="amount_e" type="number" style="background:transparent; border:0; border:1px solid white; width: 75%; padding: 8px, 10px;color: white;height:30px;border-radius:10px" placeholder="Enter Amount"></input><br><br>
+                    </div>
+                </div>
+
+
+                    <button id="insert" class="sc-fHxwqH ilGvfn open-currency-select-button" style="background-color: #FF0000" >Add Expenditure
+                    </button>
+                    <button id="insert" class="sc-fHxwqH ilGvfn open-currency-select-button" style="background-color: #FF0000; width:100px" onclick="location.href='pay.html'">Pay</button>
+                    <br><br>
+                </div>
+                
+                <div class="Income">
+        
+                    <div class="input-fields" style="text-transform: uppercase; display: block;font-size: 1.25em; padding:0 30px" >
+                        <div class="items" style="width: 100%" >
+                            <label for="title" class="label" style="display: block" >Title </label>
+                            <input id="titlebox_i" type="text" style="background:transparent; border:0; border:1px solid white; width: 75%; padding: 8px, 10px;color: white;height:30px;border-radius:10px" placeholder="Enter Title"></input> <br><br>
+                        </div>
+                        <div class="items" style="width: 100%">
+                            <label for="Category" class="label" style="display: block">Category</label>
+                            <select id="category_i" style="font-size: 1.1em; background:transparent; border:0; border:1px solid white; width: 75%; padding: 8px, 10px;border-radius:10px; color: white">
+                                <option value="" style="color: white; background-color: #17141d">Choose Category</option>
+                                    <option value="Stipend" style="color: white; background-color: #17141d;">Stipend</option>
+                                    <option value="Gift" style="color: white; background-color: #17141d;">Gift</option>
+                                    <option value="Prize" style="color: white; background-color: #17141d;">Prize</option>
+                            </select>
+                            <br><br>
+                        </div>
+                    <div class="items" style="width: 100%">
+                        <label for="Note" class="label" style="display: block" >Note</label>
+                        <input id="note_i" type="text" style="background:transparent; border:0; border:1px solid white; width: 75%; padding: 8px, 10px;color: white;height:30px;border-radius:10px" placeholder="Enter Note"></input><br><br>
+                    </div>
+                    <div class="items" style="width: 100%">
+                        <label for="Amount" class="label" style="display: block" required >Amount</label>
+                        <input id="amount_i" type="number" style="background:transparent; border:0; border:1px solid white; width: 75%; padding: 8px, 10px;color: white;height:30px;border-radius:10px" placeholder="Enter Amount"></input><br><br>
+                    </div>
+                </div>
+                    <button id="insert_1" class="sc-fHxwqH ilGvfn open-currency-select-button" onclick="a();">Add Income</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
