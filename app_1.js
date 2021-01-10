@@ -179,12 +179,12 @@ reference1.on("value", function (snapshot) {
         income += parseInt(childSnapshot.val().Amount);
     })
     
-var endPercent =((income-expenditures)/income);
+var endPercent =((expenditures)/income);
 console.log(income);
 console.log(expenditures);
-document.getElementById("po").innerHTML=income;
-document.getElementById("po1").innerHTML=expenditures;
-document.getElementById("po2").innerHTML=income-expenditures;
+document.getElementById("po").innerHTML="Total Income-"+income;
+document.getElementById("po1").innerHTML="Total Expenditure-"+expenditures;
+document.getElementById("po2").innerHTML="Balance-"+(income-expenditures);
 
 var colors = {
     'green': '#47e495',
@@ -197,8 +197,7 @@ var border = 5;
 var padding = 30;
 var startPercent = 0;
 
-var endPercent=((income-expenditures)/expenditures);
-var endPercent=1;
+var endPercent=((expenditures)/income);
 
 
 if(endPercent>0.75){

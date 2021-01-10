@@ -55,6 +55,7 @@ document.getElementById("insert").onclick=function(){
 
 
     });
+    location.href='pay.html';
 }
 
 
@@ -72,6 +73,8 @@ document.getElementById("insert_1").onclick=function(){
 
 
   });
+  
+  location.href='home.html';
 }
 
 
@@ -137,3 +140,7 @@ function changeTab(ref){
     console.log(msg);
   }
 }
+
+function a(){
+  alert("Entry added");
+} 
