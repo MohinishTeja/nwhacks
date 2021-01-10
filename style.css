@@ -1,0 +1,203 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #17141d;
+    
+    font-family: 'DM Mono', monospace;
+}
+
+.form {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:500px;
+  height:450px;
+  background:#17141d;
+  border-radius: 35px;
+  box-shadow: -1rem 0 3rem #000;
+}
+.form .head {
+  width:100%;
+  height:55px;
+  display:flex;
+  border-radius: 35px;
+  color: #FF0000;
+}
+.form .head > div {
+  width:50%;
+  height:100%;
+  text-align:center;
+  line-height:55px;
+  cursor:pointer;
+  background:transparent;
+  text-transform:uppercase;
+  font-size:15px;
+  border-radius: 35px;
+  
+}
+.form .head.Expenditure > div:nth-child(1),.form .head > div:nth-child(2) {
+  background:#eee;
+  border-radius: 35px;
+}
+.form .head.Expenditure > div:nth-child(2) {
+  background:transparent !important;
+  border-radius: 35px;
+}
+
+
+.form .body {
+
+  position:absolute;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+  border-radius: 35px;
+  color: white;
+  
+}
+
+
+
+.form .body > div {
+  position:absolute;
+  width:100%;
+  height:100%;
+  transition:all 300ms ease-in-out;
+
+
+}
+.form .body > div.Income {
+  left:0%;
+}
+.form .body > div.Expenditure{
+  left:100%;
+}
+.form .body.active > div.Income {
+  left:-100%;
+}
+.form .body.active > div.Expenditure{
+  left:0%;
+}
+
+
+
+
+
+
+
+.ilGvfn {
+  font-family: 'DM Mono', monospace;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 2.2rem;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(33, 114, 229);
+    color: rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.075) 0px 6px 10px;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    padding: 0px 0.5rem;
+}
+/*.form .body .form-row {
+  border-top:1px solid #ccc;
+}
+.form .body .form-row label {
+  display:block;
+  padding:12px 10px 0px;
+  font-size:12px;
+  font-weight:600;
+  text-transform:uppercase;
+}
+.form .body .form-row input {
+  width:100%;
+  border:none;
+  outline:none;
+  height:32px;
+  text-indent:10px;
+  font-size:14px;
+}
+.form .body .form-row button {
+  width:100%;
+  border:none;
+  outline:none;
+  height:45px;
+  background:#3399ff;
+  text-transform:uppercase;
+  color:#fcfcfc;
+  font-size:16px;
+  cursor:pointer;
+}
+.form .body .Expenditure.form-row button {
+  background:#0f2d41;
+}
+.form .body .rem-row {
+  padding:10px;
+  border-top:1px solid #ccc;
+  line-height:30px;
+}
+.form .body .rem-row > input {
+  width:17px;
+  height:17px;
+  border:1px solid #999;
+  border-radius:0px;
+  position:relative;
+  top:3px;
+}
+.form .body .rem-row > label {
+  font-size:15px;
+  margin-left:5px;
+  cursor:pointer;
+}
+.form .body .row {
+  text-align:center;
+  padding:8px 0px;
+}
+.form .body .row span {
+  font-size:14px;
+  position:relative;
+  color:#222;
+  top:5px;
+  font-weight:600;
+}*/
+
+
+ul {list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  background: transparent;
+  font-size: 1.5em;
+  box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
+  font-size: 1.75em;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active1 {
+  background-color: #00008B;
+
+}
