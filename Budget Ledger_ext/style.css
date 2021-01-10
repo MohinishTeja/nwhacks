@@ -1,0 +1,62 @@
+html{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    width:300px;
+    height: 325px;
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+}
+
+h1{
+	color:#17141d;
+font-family: 'DM Mono', monospace;
+}
+h2{
+	color: #17141d;
+  font-family: 'DM Mono', monospace;
+}
+h3{
+	color: #17141d;
+  font-family: 'DM Mono', monospace;
+}
+input {
+  border-style: solid;
+  border-color: #17141d;
+
+}
+
+button {
+  font-family: 'DM Mono', monospace;
+    -webkit-box-align: center;
+    align-items: center;
+    
+    
+    font-weight: 500;
+  display: inline-block;
+  padding: 3px 5px;
+  height: 2.5rem;
+  width: 8rem;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #17141d;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px #999;
+}
+
+button:hover {  background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
